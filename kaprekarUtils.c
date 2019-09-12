@@ -41,8 +41,8 @@ int isKaprekar(int n) {
   for(i=1; i<=numDigits; i++) {
     // I changed number0fDigits to numDigits.
     //increase the modulus by a factor of 10
-    modulous *= 10;
-
+    modulus *= 10;
+//I changed modulous to modulus
     //split the square into two parts
     first = square / modulus;
     second = square % modulus;
