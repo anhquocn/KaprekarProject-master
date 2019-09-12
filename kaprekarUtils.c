@@ -39,7 +39,7 @@ int isKaprekar(int n) {
 
   //for each possible "split" of the square...
   for(i=1; i<=numDigits; i++) {
-    // I changed number0fDigits to numDigits.
+// I changed number0fDigits to numDigits.
     //increase the modulus by a factor of 10
     modulus *= 10;
 //I changed modulous to modulus
