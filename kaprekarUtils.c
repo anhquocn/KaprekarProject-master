@@ -22,6 +22,7 @@
  * @return <code>true</code> if <code>n</code> is a Kaprekar Number,
  * <code>false</code> otherwise.
  */
+
 int isKaprekar(int n) {
 
   if(n < 1) {
@@ -34,9 +35,9 @@ int isKaprekar(int n) {
   long square = n * (long) n;
   //compute the number of digits of the square
   int numDigits = (int) log10(n) + 1;
-  long modulus = 0;
+  long modulus = 10;
   long first, second;
-
+// I changed modulus =0 to 10
   //for each possible "split" of the square...
   for(i=1; i<=numDigits; i++) {
 // I changed number0fDigits to numDigits.
@@ -50,10 +51,9 @@ int isKaprekar(int n) {
     //test if the split makes a Kaprekar number
     //the second part cannot be zero and if
     //the sum of the two parts is equal to n, then it is
-    if(second > 0 && n = first + second) {
+    if(second > 0 && n == first + second) {
       return 1;
     }
   }
   return 0;
-
 }
